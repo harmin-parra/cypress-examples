@@ -10,11 +10,11 @@ jobs:
       - name: Install
         uses: cypress-io/github-action@v6
         with:
-          runTests: false
+          #runTests: false
           build: npm install
       - name: Test
         uses: cypress-io/github-action@v6
         with:
-          build: npm run build
-          start: npm start
+          build: npx cypress run
+          #start: npm start
           # browser: firefox
