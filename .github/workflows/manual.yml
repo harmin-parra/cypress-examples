@@ -4,10 +4,16 @@ on:
   workflow_dispatch:
     inputs:
       browser:
-        description: 'The browser to use (electron, chrome, chromium, edge, firefox)'
+        description: 'The browser to use'
         default: 'electron'
         required: true
-        type: string
+        type: choice
+        options:
+        - electron
+        - chrome
+        - chromium
+        - edge
+        - firefox
 
 jobs:
   test:
