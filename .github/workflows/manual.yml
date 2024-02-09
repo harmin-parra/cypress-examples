@@ -1,5 +1,16 @@
 name: Cypress test
+
 on: workflow_dispatch
+
+    inputs:
+      name:
+        description: 'Browser'
+        # The browser to test: firefox, edge, chrome
+        default: 'electron'
+        # Input has to be provided for the workflow to run
+        required: true
+        # The data type of the input
+        type: string
 
 jobs:
   test:
@@ -11,10 +22,10 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           #runTests: false
-          build: npm install
+          run: npm install
       - name: Test
         uses: cypress-io/github-action@v6
         with:
-          build: npx cypress run
+          run: npx cypress run
           #start: npm start
           # browser: firefox
