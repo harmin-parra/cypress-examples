@@ -22,4 +22,4 @@ jobs:
       - name: Test
         uses: cypress-io/github-action@v6
         with:
-          command: npx cypress run --browser ${{ inputs.browser }}"
+          command: npx cypress run --browser ${{ inputs.browser }}
