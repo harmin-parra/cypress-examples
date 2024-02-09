@@ -21,10 +21,9 @@ jobs:
       - name: Install
         uses: cypress-io/github-action@v6
         with:
-          runTests: false
-          run: npm install
+          command: npm install
       - name: Test
         uses: cypress-io/github-action@v6
         with:
-          run: npx cypress run
-          # browser: firefox
+          command: npx cypress run
+          browser: firefox
