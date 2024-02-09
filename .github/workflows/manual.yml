@@ -1,7 +1,6 @@
 name: Cypress test
 
-on: workflow_dispatch
-
+on: workflow_dispatch:
     inputs:
       name:
         description: 'Browser'
